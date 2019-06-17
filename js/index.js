@@ -63,11 +63,29 @@ ctaButton.innerHTML = siteContent['cta']['button'];
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
-let featuresHeader = document.querySelector('.text-content h4');
-featuresHeader.innerHTML = siteContent['main-content']['features-h4'];
+const headings = document.querySelectorAll('.main-content .text-content h4');
+const actualContent = document.querySelectorAll('.main-content .text-content p')
 
-let featuresContent = document.querySelector('.text-content p');
-featuresContent.innerHTML = siteContent['main-content']['features-content'];
+actualContent [0].textContent = siteContent['main-content']['features-content'];
+actualContent [1].textContent = siteContent['main-content']['about-content'];
+actualContent [2].textContent = siteContent['main-content']['services-content'];
+actualContent [3].textContent = siteContent['main-content']['product-content'];
+actualContent [4].textContent = siteContent['main-content']['vision-content'];
+
+headings [0].textContent = siteContent['main-content']['features-h4'];
+headings [1].textContent = siteContent['main-content']['about-h4'];
+headings [2].textContent = siteContent['main-content']['services-h4'];
+headings [3].textContent = siteContent['main-content']['product-h4'];
+headings [4].textContent = siteContent['main-content']['vision-h4'];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// let featuresHeader = document.querySelector('.text-content h4');
+// featuresHeader.innerHTML = siteContent['main-content']['features-h4'];
+
+// let featuresContent = document.querySelector('.text-content p');
+// featuresContent.innerHTML = siteContent['main-content']['features-content'];
 
 // let aboutHeader = document.querySelector('.text-content h4');
 // aboutHeader.innerHTML = siteContent['main-content']['about-h4'];
@@ -75,5 +93,4 @@ featuresContent.innerHTML = siteContent['main-content']['features-content'];
 // let aboutContent = document.querySelector('.text-content p');
 // aboutContent.innerHTML = siteContent['main-content']['about-content'];
 
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
